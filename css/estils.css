@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+/*REGLES GENERALS*/
+/*Variables de colors*/
+:root {
+    --color-fosc: rgb(0, 0, 0);
+    --text-fons-fosc: rgb(255, 255, 255);
+    --color-contrast: rgb(189, 55, 0);
+    --contingut-principal: rgb(244, 244, 244);
+    --formulari: rgb(242, 232, 228);
+}
+
+/*Reset de margins i paddings*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-fosc);
+    background-color: var(--contingut-principal);
+}
+
+a {
+    color: var(--color-contrast);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-fosc);
+}
+
+a.link-interior:hover {
+    text-decoration: underline;
+}
+
+a.link-more:link {
+    border-bottom: dotted 1px var(--color-contrast);    
+}
+
+p, ol {
+    font-size: calc(1rem + 0.15vw);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: calc(1.2rem + 1vw);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: calc(1.2rem + 0.3vw);
+    margin-bottom: 5px;
+}
+
+
+/*Blocs principals del layout*/
+
+header, nav {
+    background: white;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+header .logo {
+    color: var(--color-fosc);
+    font-size: calc(3.5rem + 0.7vw);
+    font-weight: 800;
+    line-height: 0.5;
+}
+
+#lema {
+    text-transform: uppercase;
+    font-size: calc(0.8rem + 0.2vw);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: calc(1rem + 0.2vw); 
+    font-weight: 800;
+    text-align: center;
+}
+
+nav {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav .menu-links a {
+    color: var(--color-fosc);
+    line-height: 1.5;
+}
+
+nav .menu-links a:hover {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+nav .page-active {
+    color: var(--color-contrast);
+    line-height: 1.5;
+}
+
+footer {
+    background: var(--color-fosc);
+    padding: 50px 0px 30px 0px;
+    color: var(--text-fons-fosc);
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .xarxes li {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+footer .legal-links a {
+    color: var(--text-fons-fosc);
+}
+
+footer .legal-links a:hover {
+    color: var(--color-contrast);
+}
+
+footer .xarxes a:hover {
+    opacity: 0.7;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.continguts {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+
+/*Classes aplicades a les imatges i videos del lloc*/
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-fluid {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-fluid::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+/*PÀGINES DEL LLOC*/
+/*pagina home*/
+
+.hero-lema {
+    color: white;
+    font-size: calc(1.7rem + 3vw);
+    line-height: 1.5;
+    width: 90%;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+    background-image: url(../img/bg-hero-home.jpg);
+    background-size: cover;  
+}
+
+.objectius p {
+    font-size: calc(1rem + 1vw);
+}
+
+.noticies {
+    margin-top: 100px;
+}
+
+.interior-noticia {
+    margin-bottom: 30px;
+}
+
+.interior-noticia p {
+   font-size: calc(1rem + 0.15vw);
+}
+
+.interior-noticia img {
+    margin-bottom: 15px;
+}
+
+.data {
+    font-size: 1rem;
+}
+
+a.titular {
+    font-size: calc(1.2rem + 0.2vw);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.formulari {
+    background: var(--formulari);
+    padding: 60px 0;
+    margin-top: 70px;
+}
+
+.wrapper-formulari {
+    margin: auto;
+    width: 350px;
+}
+
+.form-control {
+    display: block;
+    width:100%;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.privacitat {
+    font-size: 0.7rem;
+}
+
+.boto {
+    background: var(--color-contrast);
+    color: var(--text-fons-fosc);
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    padding: 15px 25px;
+    margin-top: 15px;
+}
+
+.boto:hover {
+    background: var(--color-fosc);
+    color: var(--text-fons-fosc);
+}
+
+
+/*Pàgina símptomes.html*/
+
+.simptoma {
+    background: white;
+    padding: 30px 15px 20px 15px;
+    margin-bottom: 15px;
+}
+
+.simptoma p {
+    font-size: 1rem;
+}
+
+.simptoma:first-child {
+    margin-top: 30px;
+}
+
+.text-italica {
+    font-style: oblique;
+    font-weight: 600;
+}
+
+.titol-numerat {
+    margin-top: 15px;
+}
+
+
+/*Pàgina video.html*/
+
+figcaption.video {
+    background: white;
+    padding:20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+figcaption.video cite {
+    font-weight: 600;
+}
+
+figure.grup-video {
+    margin-bottom: 25px;
+    background: white;
+}
+
+
+/*Pàgina COP26*/
+
+.subtitol-cop26 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.fitxa dt {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+ol li {
+    margin-left:2rem;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: white;
+    border-left: 5px solid var(--color-contrast);
+}
+
+blockquote p {
+    font-style: oblique;
+}
+
+blockquote cite {
+    font-weight: 600;
+}
+
+
+/*REGLES RESPONSIVES*/
+
+@media screen and (min-width: 992px) {
+    .container {
+        text-align: left;
+        width: 70%;
+    }
+
+    .menu-links {
+        text-align: left;
+        display: flex;
+        gap: 30px;
+    }
+
+    nav .menu-links  {
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    footer .legal-links li {
+        display: inline-block;
+    }
+
+    footer .legal-links li::after {
+        content: " • ";
+    }
+    footer .legal-links li:last-child::after {
+        content: "";
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-lema {
+        width: 70%;
+    }
+
+    .wrapper-noticies {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 60px;
+    }
+
+    .wrapper-formulari {
+        width: 500px;
+    }    
+
+    .grup-simptomes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30px;
+    }
+
+    .simptoma:nth-child(odd) {
+        grid-column: 1/3;
+    }
+
+    .simptoma:nth-child(even) {
+        grid-column: 2/4;
+    }
+
+    .simptoma {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+    }
+
+    .titol-numerat {
+        margin-top: 0px;
+    }
+
+    .img-simptoma img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .videos-pagina {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+    figure.grup-video {
+        margin-top: 35px;
+    }
+
+    .cop26-grup {
+        display: grid;
+        grid-template-columns: 6fr 7fr;
+        column-gap: 85px;
+    }
+
+    .fitxa {
+        grid-column: 1;
+    }
+
+    .resultats {
+        grid-column: 2;
+    }
+    
+}
